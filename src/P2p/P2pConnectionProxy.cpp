@@ -77,7 +77,8 @@ void P2pConnectionProxy::write(const P2pMessage &message) {
 }
 
 void P2pConnectionProxy::ban() {
-  // not implemented
+  // not implemented... yet 
+  // TODO: Make the ban.
 }
 
 void P2pConnectionProxy::stop() {
