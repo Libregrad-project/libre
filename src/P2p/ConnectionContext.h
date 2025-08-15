@@ -39,6 +39,10 @@ struct CryptoNoteConnectionContext {
   uint32_t m_last_response_height = 0;
 };
 
+// DOC: If we have the 'case' of state_before_handshake, then we'll return the
+// state_before_handshake property / name. This then can be used within other files,
+// in an if statement, or anywhere really.
+
 inline std::string get_protocol_state_string(CryptoNoteConnectionContext::state s) {
   switch (s)  {
   case CryptoNoteConnectionContext::state_before_handshake:
