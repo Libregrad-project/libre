@@ -23,7 +23,7 @@ struct CryptoNoteConnectionContext {
   time_t m_started = 0;
 
   enum state {
-    state_before_handshake = 0, //default state // Was initially state_befor_handshake // (Here for debugging.)
+    state_before_handshake = 0, //default state | // Was initially state_befor_handshake // (Here for debugging.)
     state_synchronizing,
     state_idle,
     state_normal,
