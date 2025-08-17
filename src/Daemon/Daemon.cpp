@@ -109,7 +109,7 @@ int main(int argc, char* argv[])
     command_line::add_arg(desc_cmd_sett, arg_log_level);
     command_line::add_arg(desc_cmd_sett, arg_console);
     command_line::add_arg(desc_cmd_sett, arg_testnet_on);
-    command_line::add_arg(desc_cmd_sett, arg_print_genesis_tx);
+ //   command_line::add_arg(desc_cmd_sett, arg_print_genesis_tx);
 
     RpcServerConfig::initOptions(desc_cmd_sett);
     CoreConfig::initOptions(desc_cmd_sett);
@@ -131,10 +131,10 @@ int main(int argc, char* argv[])
         return false;
       }
 
-      if (command_line::get_arg(vm, arg_print_genesis_tx)) {
-        print_genesis_tx_hex();
-        return false;
-      }
+      // if (command_line::get_arg(vm, arg_print_genesis_tx)) {
+      //   print_genesis_tx_hex();
+      //   return false;
+      // }
 
       std::string data_dir = command_line::get_arg(vm, command_line::arg_data_dir);
       std::string config = command_line::get_arg(vm, arg_config_file);
@@ -189,12 +189,12 @@ int main(int argc, char* argv[])
     CryptoNote::CurrencyBuilder currencyBuilder(logManager);
     currencyBuilder.testnet(testnet_mode);
 
-    try {
-      currencyBuilder.currency();
-    } catch (std::exception&) {
-      std::cout << "GENESIS_COINBASE_TX_HEX constant has an incorrect value. Please launch: " << CryptoNote::CRYPTONOTE_NAME << "d --" << arg_print_genesis_tx.name;
-      return 1;
-    }
+    // try {
+    //   currencyBuilder.currency();
+    // } catch (std::exception&) {
+    //   std::cout << "GENESIS_COINBASE_TX_HEX constant has an incorrect value. Please launch: " << CryptoNote::CRYPTONOTE_NAME << "d --" << arg_print_genesis_tx.name;
+    //   return 1;
+    // }
 
     CryptoNote::Currency currency = currencyBuilder.currency();
     CryptoNote::core ccore(currency, nullptr, logManager);
