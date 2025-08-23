@@ -1,7 +1,3 @@
-// Copyright (c) 2011-2016 The Cryptonote developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
-
 #include "HttpParser.h"
 
 #include <algorithm>
@@ -31,7 +27,7 @@ HttpResponse::HTTP_STATUS HttpParser::parseResponseStatusFromString(const std::s
   else throw std::system_error(make_error_code(CryptoNote::error::HttpParserErrorCodes::UNEXPECTED_SYMBOL),
       "Unknown HTTP status code is given");
 
-  return CryptoNote::HttpResponse::STATUS_200; //unaccessible
+  return CryptoNote::HttpResponse::STATUS_200; 
 }
 
 
@@ -60,7 +56,7 @@ void HttpParser::receiveResponse(std::istream& stream, HttpResponse& response) {
   char c;
   
   stream.get(c);
-  while (stream.good() && c != '\r') { //Till the end
+  while (stream.good() && c != '\r') { 
     status += c;
     stream.get(c);
   }
@@ -181,7 +177,7 @@ bool HttpParser::readHeader(std::istream& stream, std::string& name, std::string
       throw std::system_error(make_error_code(CryptoNote::error::HttpParserErrorCodes::UNEXPECTED_SYMBOL));
     }
 
-    return false; //no more headers
+    return false; 
   }
 
   return true;
