@@ -122,12 +122,12 @@ void HttpParser::readHeaders(std::istream& stream, HttpRequest::Headers& headers
   std::string value;
 
   while (readHeader(stream, name, value)) {
-    headers[name] = value; //use insert
+    headers[name] = value; 
     name.clear();
     value.clear();
   }
 
-  headers[name] = value; //use insert
+  headers[name] = value;
 }
 
 bool HttpParser::readHeader(std::istream& stream, std::string& name, std::string& value) {
