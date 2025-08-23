@@ -20,6 +20,9 @@ void throwIfNotGood(std::istream& stream) {
 
 namespace CryptoNote {
 
+// FIXME: Add more statements for more error_codes. And, clean up the code,
+// some more.
+
 HttpResponse::HTTP_STATUS HttpParser::parseResponseStatusFromString(const std::string& status) {
   if (status == "200 OK" || status == "200 Ok") return CryptoNote::HttpResponse::STATUS_200;
   else if (status == "404 Not Found") return CryptoNote::HttpResponse::STATUS_404;
