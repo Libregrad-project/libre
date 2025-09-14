@@ -1,0 +1,6 @@
+2025-Aug-07 16:10:52.902042 INFO [daemon] libre v1.1.1.1()
+2025-Aug-07 16:10:52.902403 INFO [daemon] Module folder: ./libred
+2025-Aug-07 16:10:52.905825 INFO [daemon] Initializing p2p server...
+2025-Aug-07 16:10:52.906059 INFO [node_server] Binding on 0.0.0.0:8139
+2025-Aug-07 16:10:52.906910 INFO [miner] Mining has been stopped, 0 finished
+2025-Aug-07 16:10:52.907321 ERROR [daemon] Exception: TcpListener::TcpListener, bind failed, result=98, Address already in use
