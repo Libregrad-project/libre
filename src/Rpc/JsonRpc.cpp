@@ -29,6 +29,8 @@ void invokeJsonRpcCommand(HttpClient& httpClient, JsonRpcRequest& jsReq, JsonRpc
   HttpRequest httpReq;
   HttpResponse httpRes;
 
+  // INFO: We essentially set the json rpc endpoint
+  // To <NodeIP>:<port>/json_rpc 
   httpReq.setUrl("/json_rpc");
   httpReq.setBody(jsReq.getBody());
 
@@ -45,7 +47,6 @@ void invokeJsonRpcCommand(HttpClient& httpClient, JsonRpcRequest& jsReq, JsonRpc
     throw err;
   }
 }
-
 
 }
 }

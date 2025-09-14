@@ -221,3 +221,4 @@ JsonMemberMethod makeMemberMethod(bool (Class::*handler)(const Params&, Result&)
 
 
 }
+} // Was not here..

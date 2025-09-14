@@ -4,7 +4,7 @@ file(GLOB_RECURSE BlockchainExplorer BlockchainExplorer/*)
 file(GLOB_RECURSE Common Common/*)
 file(GLOB_RECURSE ConnectivityTool ConnectivityTool/*)
 file(GLOB_RECURSE Crypto crypto/*)
-file(GLOB_RECURSE CryptoNoteCore CryptoNoteCore/* CryptoNoteConfig.h)
+file(GLOB_RECURSE CryptoNoteCore CryptoNoteCore/* config/CryptoNoteConfig.h) # Used to be CryptoNoteConfig.h // No config. This comment is just in-case.
 file(GLOB_RECURSE CryptoNoteProtocol CryptoNoteProtocol/*)
 file(GLOB_RECURSE Daemon Daemon/*)
 file(GLOB_RECURSE Http HTTP/*)
